@@ -1,1 +1,1 @@
-Repository containing my most valueble projects -at the time-
+Repository containing my most valuable projects -at the time-
