@@ -55,10 +55,19 @@ void sreverseList(stack* stack) {
     temp->next = NULL;
 }
 
+void freeList() {
+    node* ptr = headNodeptr;
+    
+    while (ptr != NULL) {
+        node* next = ptr->next;
+        free(ptr);
+        ptr = next;
+    }
+}
+
 int main()
 {
-    stack stack;
-    stack = (struct stack){{0}, -1};
+    stack stack = {{0}, -1};
 
     pushFront(1);
     pushFront(2);
@@ -67,6 +76,5 @@ int main()
     printList();
     sreverseList(&stack);
     printList();
-    pushFront(5);
-    printList();
+    freeList();
 }
